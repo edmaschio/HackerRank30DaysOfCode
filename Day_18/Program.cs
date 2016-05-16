@@ -7,11 +7,12 @@ namespace Day_18
     internal class Solution
     {
         Queue<string> queue;
+        Stack<string> stack;
 
 
         public Solution()
         {
-            s = new Queue<string>();
+            queue = new Queue<string>();
         }
 
         internal void pushCharacter(char c)
