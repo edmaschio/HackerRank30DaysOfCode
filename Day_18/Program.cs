@@ -6,33 +6,34 @@ namespace Day_18
 {
     internal class Solution
     {
-        Queue<string> queue;
-        Stack<string> stack;
+        Queue<char> queue;
+        Stack<char> stack;
 
 
         public Solution()
         {
-            queue = new Queue<string>();
+            queue = new Queue<char>();
+            stack = new Stack<char>();
         }
 
         internal void pushCharacter(char c)
         {
-            throw new NotImplementedException();
+            stack.Push(c);
         }
 
         internal void enqueueCharacter(char c)
         {
-            throw new NotImplementedException();
+            queue.Enqueue(c);
         }
 
         internal char popCharacter()
         {
-            throw new NotImplementedException();
+            return stack.Pop();
         }
 
         internal char dequeueCharacter()
         {
-            throw new NotImplementedException();
+            return queue.Dequeue();
         }
     }
 
@@ -78,6 +79,8 @@ namespace Day_18
             {
                 Console.Write("The word, {0}, is not a palindrome.", s);
             }
+
+            Console.ReadKey();
         }
     }
 }
