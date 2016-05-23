@@ -20,6 +20,19 @@ namespace Day_24
         public static Node removeDuplicates(Node head)
         {
             //Write your code here
+            if (head == null)
+                return head;
+
+            Node actual = head;
+
+            while (actual != null && actual.next != null)
+            {
+                if (actual.data == actual.next.data)
+                    actual.next = actual.next.next;
+                else
+                    actual = actual.next;
+            }
+            return head;
         }
 
         public static Node insert(Node head, int data)
